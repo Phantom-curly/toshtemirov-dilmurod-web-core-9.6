@@ -1,0 +1,27 @@
+{
+  "name": "verstka9",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "sass styles/main.scss styles/main.css",
+    "watch-css": "sass --watch styles/main.scss styles/main.css",
+    "dev": "concurrently \"npm run watch-css\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Phantom-curly/toshtemirov-dilmurod-web-core-9.6.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Phantom-curly/toshtemirov-dilmurod-web-core-9.6/issues"
+  },
+  "homepage": "https://github.com/Phantom-curly/toshtemirov-dilmurod-web-core-9.6#readme",
+  "devDependencies": {
+    "sass": "^1.106.1"
+  }
+}

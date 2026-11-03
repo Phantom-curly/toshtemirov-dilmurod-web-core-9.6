@@ -1,0 +1,39 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.footer {
+    border-top: 1px solid rgba(217, 255, 245, 1);
+    font-family: TT Lakes;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 16px;
+    line-gap-override: 3px;
+    letter-spacing: 0px;
+    text-align: center;
+    color: v.$color-font;
+
+    & > p {
+        padding: 8px 0;
+    }
+    @include m.tablet {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        height: 120px;
+        align-items: center;
+        padding: 20px;
+        &> p {
+            &:nth-child(1) {
+                text-align: left;
+            }
+
+            &:nth-child(2) {
+                text-align: center;
+            }
+
+            &:nth-child(3) {
+                text-align: right;
+            }
+        }
+    }
+}
+

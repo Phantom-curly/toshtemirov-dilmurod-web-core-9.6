@@ -1,0 +1,26 @@
+@use "variables" as v;
+
+@mixin mobile-only {
+    @media (max-width: #{v.$bp-tablet - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet-only {
+    @media (min-width: v.$bp-tablet) and
+            (max-width: #{v.$bp-desktop - 1px}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (min-width: v.$bp-tablet) {
+        @content;
+    }
+}
+
+@mixin desktop {
+    @media (min-width: v.$bp-desktop) {
+        @content;
+    }
+}

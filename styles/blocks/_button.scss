@@ -1,0 +1,62 @@
+@use "../_variables.scss" as v;
+
+@mixin pink-circle {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    transition: opacity 0.3s ease;
+}
+
+button {
+    @include pink-circle;
+    background-color: v.$color-button;
+    border: none;
+    padding-top: 2px;
+    img {
+        width: 18px;
+        height: 18px;
+    }
+}
+
+.dropdown__button {
+    @include pink-circle;
+    background-color: rgba(255, 255, 255, 0);
+    border: 2px solid v.$color-button;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    img {
+        width: 9px;
+        height: 14px;
+        display: block;
+    }
+}
+
+.order__button {
+    width: 120px;
+    height: 32px;
+    border-radius: 20px;
+    transition: opacity 0.3s ease;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    font-family: TT Lakes;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 24px;
+    letter-spacing: -0.15px;
+    text-align: right;
+    text-transform: uppercase;
+    position: absolute;
+    top: 140px;
+    left: 120px;
+    padding: 0;
+    justify-content: space-around;
+    align-items: center;
+    & img {
+        width: 9px;
+        height: 10px;
+        margin: 0;
+    }
+}

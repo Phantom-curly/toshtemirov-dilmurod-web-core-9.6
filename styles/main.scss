@@ -1,0 +1,28 @@
+// blocks
+@use "blocks/button";
+@use "blocks/tabs";
+@use "blocks/swiper1";
+@use "blocks/pricing";
+
+
+
+// layout items
+@use "layout/page-layout";
+@use "layout/sidebar";
+@use "layout/site-footer";
+@use "layout/site-header";
+
+//others
+@use "fonts";
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: TT Lakes;
+    font-weight: 400;
+} 
+

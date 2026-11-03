@@ -1,0 +1,109 @@
+@use "../variables" as v;
+@use "../mixins" as m;
+
+.main-page__header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    gap: 7px;
+    background-color: #ffffff;
+    border-bottom: 1px solid rgba(217, 255, 245, 1);
+}
+
+.header {
+    width: 100%;
+
+    &__left,
+    &__right {
+        display: flex;
+        align-items: center;
+        justify-content: space-evenly;
+    }
+
+    &__left {
+        margin: 0 12px;
+        margin-right: 0px;
+        gap: 8px;
+    }
+    &__right {
+        justify-content: flex-end;
+        margin-right: 12px;
+    }
+    &__logo {
+        display: inline-flex;
+        padding: 10px 10px;
+        width: 106px;
+        height: auto;
+    }
+
+    &__button {
+        margin: 0 5px;
+    }
+    @include m.mobile-only {
+        &__divider--2 {
+            width: 2px;
+            height: 40px;
+            background-color: #eaeaea;
+            flex-shrink: 0;
+            margin-left: auto;
+        }
+        &__divider--1,
+        &__divider--3 {
+            display: none;
+        }
+
+        &__right {
+            gap: 8px;
+        }
+
+        &__left {
+            margin-left: 15px;
+        }
+
+        &__right--more,
+        &__button > span {
+            display: none;
+        }
+    }
+    @include m.tablet-only {
+        &__button > span {
+            display: none;
+        }
+
+        &__divider--2 {
+            display: none;
+        }
+
+        &__divider--1,
+        &__divider--3 {
+            width: 2px;
+            height: 40px;
+            background-color: #eaeaea;
+        }
+
+        &__right {
+            gap: 12px;
+        }
+
+        &__left {
+            margin-left: 22px;
+        }
+    }
+
+    @include m.desktop {
+        display: none;
+    }
+}
+
+// .header__button,
+// .title__button {
+//     display: inline-flex;
+//     width: 40px;
+//     height: 40px;
+//     background-color: #ff3e79;
+//     border-radius: 50%;
+//     border: none;
+//     margin: 0 5px;
+// }

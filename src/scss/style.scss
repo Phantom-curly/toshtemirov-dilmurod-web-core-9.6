@@ -1,0 +1,3 @@
+// Entry point for styles: fonts first, then one @use per block
+@use 'fonts';
+@use 'blocks/page';

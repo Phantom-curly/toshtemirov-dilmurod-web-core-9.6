@@ -1,0 +1,7 @@
+// Paths in url() are relative to style.scss (the entry), even in partials
+@font-face {
+  font-family: 'Comic';
+  src: url('../fonts/comic.ttf') format('truetype');
+  font-weight: normal;
+  font-style: italic;
+}

@@ -1,27 +1,67 @@
 {
-  "name": "verstka9",
+  "name": "webpack-static-template",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css": "sass styles/main.scss styles/main.css",
-    "watch-css": "sass --watch styles/main.scss styles/main.css",
-    "dev": "concurrently \"npm run watch-css\""
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/Phantom-curly/toshtemirov-dilmurod-web-core-9.6.git"
-  },
-  "keywords": [],
-  "author": "",
+  "private": true,
+  "description": "Webpack 5 starter for static sites: HTML, SCSS, JavaScript",
+  "keywords": [
+    "web",
+    "scss",
+    "html",
+    "javascript",
+    "webpack"
+  ],
   "license": "ISC",
-  "type": "commonjs",
-  "bugs": {
-    "url": "https://github.com/Phantom-curly/toshtemirov-dilmurod-web-core-9.6/issues"
+  "author": "Habsida",
+  "scripts": {
+    "start": "webpack serve --mode development",
+    "build": "webpack --mode production",
+    "dev": "webpack --mode development",
+    "watch": "webpack --mode development --watch",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
+    "lint": "eslint .",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
-  "homepage": "https://github.com/Phantom-curly/toshtemirov-dilmurod-web-core-9.6#readme",
+  "browserslist": [
+    "defaults"
+  ],
   "devDependencies": {
-    "sass": "^1.106.1"
+    "@babel/core": "^8.0.6",
+    "@babel/preset-env": "^8.0.6",
+    "@eslint/js": "^10.0.1",
+    "autoprefixer": "^10.6.1",
+    "babel-loader": "^10.1.1",
+    "copy-webpack-plugin": "^14.0.0",
+    "css-loader": "^7.1.5",
+    "css-minimizer-webpack-plugin": "^8.0.0",
+    "eslint": "^10.12.0",
+    "eslint-config-prettier": "^10.1.8",
+    "gh-pages": "^6.3.0",
+    "globals": "^17.13.0",
+    "html-webpack-plugin": "^5.6.8",
+    "mini-css-extract-plugin": "^2.10.2",
+    "postcss": "^8.5.28",
+    "postcss-loader": "^8.2.1",
+    "prettier": "^3.9.9",
+    "sass": "^1.105.1",
+    "sass-loader": "^17.0.1",
+    "webpack": "^5.111.1",
+    "webpack-cli": "^7.2.3",
+    "webpack-dev-server": "^6.0.0"
+  },
+  "engines": {
+    "node": ">=24.11.0"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "allowScripts": {
+    "@parcel/watcher": false
+  },
+  "dependencies": {
+    "swiper": "^14.4.0"
   }
 }

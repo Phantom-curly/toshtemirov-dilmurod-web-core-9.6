@@ -1,0 +1,14 @@
+// Every block file loads the variables it uses: @use is file-scoped
+@use '../variables' as vars;
+
+body {
+  padding: 1rem;
+  margin: 0;
+  font-family: Comic, sans-serif;
+  background-color: vars.$background;
+  color: vars.$text;
+}
+
+h3 {
+  color: vars.$accent;
+}

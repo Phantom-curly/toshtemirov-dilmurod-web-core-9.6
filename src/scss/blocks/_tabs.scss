@@ -1,41 +1,41 @@
-@use "../variables" as v;
-@use "../mixins" as m;
+@use '../variables' as v;
+@use '../mixins' as m;
 
 .main-page__navbar {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    list-style-type: none;
-    overflow-x: auto;
-    -ms-overflow-style: none;
-    scrollbar-width: none;
-    margin: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  list-style-type: none;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin: 20px;
+
+  &__item {
+    flex: 0 0 auto;
+    padding: 0 10px;
+    border-radius: 6px;
+    color: rgba(126, 126, 130, 1);
+    font-weight: 400;
+    height: 40px;
+    align-content: center;
+
+    &:first-child {
+      border: 2px solid v.$color-menu_selected;
+      background-color: #ffffff;
+    }
+  }
+
+  @include m.desktop {
+    flex-wrap: wrap;
 
     &__item {
-        flex: 0 0 auto;
-        padding: 0 10px;
-        border-radius: 6px;
-        color: rgba(126, 126, 130, 1);
-        font-weight: 400;
-        height: 40px;
-        align-content: center;
-
-        &:first-child {
-            border: 2px solid v.$color-menu_selected;
-            background-color: #ffffff;
-        }
+      margin: 0 10px;
+      padding: 5px 10px;
     }
-
-    @include m.desktop {
-        flex-wrap: wrap;
-        
-        &__item {
-            margin: 0 10px;
-            padding: 5px 10px;
-        }
-    }
+  }
 }
 
 .scroll-container::-webkit-scrollbar {
-    display: none;
+  display: none;
 }

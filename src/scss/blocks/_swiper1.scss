@@ -1,161 +1,164 @@
-@use "../variables" as v;
-@use "../mixins" as m;
+@use '../variables' as v;
+@use '../mixins' as m;
 
 .swiper {
-    width: auto;
-    height: auto;
-    padding: 10px 0;
-    margin-left: 0;
-    --swiper-pagination-color: rgb(145, 146, 148);
+  width: auto;
+  height: auto;
+  padding: 10px 0;
+  margin-left: 0;
+  --swiper-pagination-color: rgb(145, 146, 148);
 
-    &1-text,
-    &2-text,
-    &3-text {
-        color: v.$color-font;
-        font-family: TT Lakes;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: -0.2px;
-        text-transform: uppercase;
-        padding: 16px;
-        border-top: 1px solid rgba(217, 255, 245, 1);
-        width: 100%;
-        margin: 0;
-        background: linear-gradient(to right, rgba(248, 248, 248, 1), rgba(255, 255, 255, 1)); 
+  &1-text,
+  &2-text,
+  &3-text {
+    color: v.$color-font;
+    font-family: TT Lakes;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    text-transform: uppercase;
+    padding: 16px;
+    border-top: 1px solid rgba(217, 255, 245, 1);
+    width: 100%;
+    margin: 0;
+    background: linear-gradient(
+      to right,
+      rgba(248, 248, 248, 1),
+      rgba(255, 255, 255, 1)
+    );
+  }
+
+  @include m.mobile-only {
+    &1-item {
+      width: 240px;
+      height: 72px;
+      flex-shrink: 0;
     }
 
-    @include m.mobile-only {
-        &1-item {
-            width: 240px;
-            height: 72px;
-            flex-shrink: 0;
-        }
-
-        &2-item {
-            width: 240px;
-            height: 160px;
-            flex-shrink: 0;
-        }
-        &-wrapper {
-            display: flex;
-            gap: 0;
-            margin: 0;
-            padding: 0;
-        }
-
-        &3-item {
-            width: 260px;
-            height: 200px;
-            flex-shrink: 0;
-        }
-        &-pagination {
-            position: static;
-            margin-top: 16px;
-            margin-bottom: 24px;
-        }
+    &2-item {
+      width: 240px;
+      height: 160px;
+      flex-shrink: 0;
+    }
+    &-wrapper {
+      display: flex;
+      gap: 0;
+      margin: 0;
+      padding: 0;
     }
 
-    @include m.tablet {
-        &1-item,
-        &2-item {
-            width: 100% !important;
-            min-width: 0;
-            margin-right: 0 !important;
-        }
-        &1,
-        &2 {
-            display: grid;
-            transform: none !important;
+    &3-item {
+      width: 260px;
+      height: 200px;
+      flex-shrink: 0;
+    }
+    &-pagination {
+      position: static;
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
+  }
 
-            column-gap: 16px;
-            row-gap: 16px;
-            padding: 5px 16px;
-            box-sizing: border-box;
-        }
+  @include m.tablet {
+    &1-item,
+    &2-item {
+      width: 100% !important;
+      min-width: 0;
+      margin-right: 0 !important;
+    }
+    &1,
+    &2 {
+      display: grid;
+      transform: none !important;
 
-        &_expand {
-            margin: 15px 5px;
-            padding-left: 12px;
-            cursor: pointer;
-            & img {
-                width: 9px;
-                height: 14px;
-                transition: transform 0.7s ease;
-                margin-right: 5px;
-            }
-        }
+      column-gap: 16px;
+      row-gap: 16px;
+      padding: 5px 16px;
+      box-sizing: border-box;
     }
 
-    @include m.tablet-only {
-        &1,
-        &2 {
-            grid-template-columns: repeat(3, minmax(0, 1fr));
-        }
-        &1:not(.swiper__expanded) &1-item:nth-child(n + 7) {
-            display: none;
-        }
+    &_expand {
+      margin: 15px 5px;
+      padding-left: 12px;
+      cursor: pointer;
+      & img {
+        width: 9px;
+        height: 14px;
+        transition: transform 0.7s ease;
+        margin-right: 5px;
+      }
+    }
+  }
 
-        &2:not(.swiper__expanded) &2-item:nth-child(n + 4) {
-            display: none;
-        }
+  @include m.tablet-only {
+    &1,
+    &2 {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+    &1:not(.swiper__expanded) &1-item:nth-child(n + 7) {
+      display: none;
     }
 
-    @include m.desktop {
-        &1,
-        &2 {
-            grid-template-columns: repeat(4, minmax(0, 1fr));
-        }
-
-        &1:not(.swiper__expanded) &1-item:nth-child(n + 9) {
-            display: none;
-        }
-
-        &2:not(.swiper__expanded) &2-item:nth-child(n + 5) {
-            display: none;
-        }
+    &2:not(.swiper__expanded) &2-item:nth-child(n + 4) {
+      display: none;
     }
+  }
+
+  @include m.desktop {
+    &1,
+    &2 {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    &1:not(.swiper__expanded) &1-item:nth-child(n + 9) {
+      display: none;
+    }
+
+    &2:not(.swiper__expanded) &2-item:nth-child(n + 5) {
+      display: none;
+    }
+  }
 }
 
 .more__button__rotated img {
-        transform: rotate(180deg);
-    }
+  transform: rotate(180deg);
+}
 
-
-    .swiper1-item,
+.swiper1-item,
 .swiper2-item,
 .swiper3-item {
-    background-color: white;
-    padding: 13px;
-    border: 1px solid rgba(234, 234, 234, 1);
-    border-radius: 6px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+  background-color: white;
+  padding: 13px;
+  border: 1px solid rgba(234, 234, 234, 1);
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .swiper1-item {
-    > img {
-        width: 140px;
-        max-height: 50px;
-        object-fit: contain;
-        display: flex;
-        justify-content: start;
-        object-position: left center;
-    }
+  > img {
+    width: 140px;
+    max-height: 50px;
+    object-fit: contain;
+    display: flex;
+    justify-content: start;
+    object-position: left center;
+  }
 }
 
 .swiper2-item {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: stretch;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
 
-    > p {
-        margin: 0;
-    }
+  > p {
+    margin: 0;
+  }
 
-    > .dropdown__button {
-        align-self: flex-end;
-    }
+  > .dropdown__button {
+    align-self: flex-end;
+  }
 }

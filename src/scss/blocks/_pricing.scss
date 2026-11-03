@@ -1,114 +1,113 @@
-@use "../variables" as v;
-@use "../mixins" as m;
+@use '../variables' as v;
+@use '../mixins' as m;
 
 .pricing__header {
-    @include m.tablet {
-        font-family: TT Lakes;
-        font-weight: 400;
-        font-size: 14px;
-        line-height: 16px;
-        letter-spacing: 0px;
-        color: v.$color-font;
-
-        display: grid;
-        grid-template-columns: v.$pricing-columns;
-        gap: 16px;
-        align-items: center;
-        width: 100%;
-        box-sizing: border-box;
-        padding: 16px 32px;
-
-        & + .swiper {
-            width: auto;
-            padding: 0 20px;
-            margin: 0;
-            box-sizing: border-box;
-        }
-    }
-}
-
-.swiper3 {
-    @include m.tablet {
-        display: flex;
-        flex-direction: column;
-        gap: 0;
-        background: white;
-        border-radius: 8px;
-        overflow: hidden;
-        transform: none !important;
-        padding: 0 12px;
-        box-sizing: border-box;
-
-        & &-item {
-            display: grid;
-            grid-template-columns: v.$pricing-columns;
-            gap: 16px;
-            align-items: center;
-
-            margin: 0;
-            padding: 10px 0;
-
-            background: transparent;
-            border: none;
-            border-radius: 0;
-
-            &:not(:last-child) {
-                border-bottom: 1px solid #eaeaea;
-            }
-        }
-        &-item--text {
-            display: contents;
-
-            > .column {
-                display: none;
-            }
-
-            > .row {
-                margin: 0;
-            }
-        }
-
-        &-item .order__button {
-            position: static;
-            transform: none;
-            justify-self: end;
-            width: 120px;
-        }
-
-        & + .swiper-pagination {
-            display: none;
-        }
-    }
-}
-
-@include m.desktop {
-    .pricing__header,
-    .swiper3 .swiper3-item {
-        grid-template-columns: v.$pricing-columns-desktop;
-    }
-}
-
-
-.swiper3-item {
-    &--text > p {
-        padding: 3px 0;
-    }
-}
-
-.column {
+  @include m.tablet {
     font-family: TT Lakes;
-    font-weight: 500;
+    font-weight: 400;
     font-size: 14px;
     line-height: 16px;
     letter-spacing: 0px;
     color: v.$color-font;
+
+    display: grid;
+    grid-template-columns: v.$pricing-columns;
+    gap: 16px;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 16px 32px;
+
+    & + .swiper {
+      width: auto;
+      padding: 0 20px;
+      margin: 0;
+      box-sizing: border-box;
+    }
+  }
+}
+
+.swiper3 {
+  @include m.tablet {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    transform: none !important;
+    padding: 0 12px;
+    box-sizing: border-box;
+
+    & &-item {
+      display: grid;
+      grid-template-columns: v.$pricing-columns;
+      gap: 16px;
+      align-items: center;
+
+      margin: 0;
+      padding: 10px 0;
+
+      background: transparent;
+      border: none;
+      border-radius: 0;
+
+      &:not(:last-child) {
+        border-bottom: 1px solid #eaeaea;
+      }
+    }
+    &-item--text {
+      display: contents;
+
+      > .column {
+        display: none;
+      }
+
+      > .row {
+        margin: 0;
+      }
+    }
+
+    &-item .order__button {
+      position: static;
+      transform: none;
+      justify-self: end;
+      width: 120px;
+    }
+
+    & + .swiper-pagination {
+      display: none;
+    }
+  }
+}
+
+@include m.desktop {
+  .pricing__header,
+  .swiper3 .swiper3-item {
+    grid-template-columns: v.$pricing-columns-desktop;
+  }
+}
+
+.swiper3-item {
+  &--text > p {
+    padding: 3px 0;
+  }
+}
+
+.column {
+  font-family: TT Lakes;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0px;
+  color: v.$color-font;
 }
 
 .row {
-    font-family: TT Lakes;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 18px;
-    letter-spacing: 0.2px;
-    color: v.$color-font_primary;
+  font-family: TT Lakes;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.2px;
+  color: v.$color-font_primary;
 }

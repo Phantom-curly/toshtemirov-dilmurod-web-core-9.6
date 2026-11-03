@@ -1,3 +1,17 @@
-$background: #24292e;
-$text: #fff;
-$accent: #8ed6fb;
+$color-button: rgba(255, 62, 121, 1);
+$color-highlight: rgba(65, 246, 215, 1);
+$color-menu_selected: rgba(184, 255, 236, 1);
+$color-font_primary: rgba(27, 28, 33, 1);
+$color-font: rgba(126, 126, 130, 1);
+$color-border_color: rgba(234, 234, 234, 1);
+
+$br-card: 6px;
+
+$sidebar-width: 320px;
+
+$bp-tablet: 768px;
+$bp-desktop: 1120px;
+
+
+$pricing-columns: minmax(0, 1fr) 110px 130px 160px;
+$pricing-columns-desktop: minmax(0, 2fr) minmax(0, 1fr) minmax(0, 0.8fr) 150px;

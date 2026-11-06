@@ -116,13 +116,14 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+}
 
-  &__buttons {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 150px;
-  }
+.footer__buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 150px;
+  gap: 10px;
 }
 
 .email_address {

@@ -29,18 +29,19 @@
     );
   }
 
-  @include m.mobile-only {
-    &1-item {
-      width: 240px;
-      height: 72px;
-      flex-shrink: 0;
-    }
+  &1-item {
+    width: 240px;
+    height: 72px;
+    flex-shrink: 0;
+  }
 
-    &2-item {
-      width: 240px;
-      height: 160px;
-      flex-shrink: 0;
-    }
+  &2-item {
+    width: 240px;
+    height: 160px;
+    flex-shrink: 0;
+  }
+
+  @include m.mobile-only {
     &-wrapper {
       display: flex;
       gap: 0;

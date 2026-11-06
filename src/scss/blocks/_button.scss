@@ -5,6 +5,11 @@
   height: 40px;
   border-radius: 50%;
   transition: opacity 0.3s ease;
+
+  transition:
+    transform 0.7s ease,
+    box-shadow 0.3s ease,
+    opacity 0.3s ease;
 }
 
 button {
@@ -12,9 +17,17 @@ button {
   background-color: v.$color-button;
   border: none;
   padding-top: 2px;
+  cursor: pointer;
+
   img {
     width: 18px;
     height: 18px;
+  }
+
+  &:hover {
+    transform: scale(1.05);
+    opacity: 0.9;
+    box-shadow: 0 6px 20px rgba(255, 80, 150, 0.35);
   }
 }
 
